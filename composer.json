@@ -1,0 +1,31 @@
+{
+    "name": "lara-igniter/route-js",
+    "description": "Generates a Blade directive exporting all of your named Laraigniter routes. Also provides a nice route() helper function in JavaScript.",
+    "keywords": [
+        "laraigniter",
+        "routes",
+        "javascript",
+        "route-js"
+    ],
+    "homepage": "https://github.com/lara-igniter/route-js",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "George Tsachrelias",
+            "email": "geo.tsachrelias@laraigniter.com"
+        }
+    ],
+    "require": {
+        "ext-json": "*",
+        "lara-igniter/framework": "^1.0"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "Elegant\\RouteJs\\": "src/"
+        }
+    },
+    "autoload-dev": {},
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
