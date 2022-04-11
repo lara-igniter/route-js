@@ -17,14 +17,14 @@ export default class Router extends String {
         this._config = config ?? (typeof RouteJS !== 'undefined' ? RouteJS : globalThis?.RouteJS);
         this._config = { ...this._config, absolute };
 
-        // if (name) {
-        //     if (!this._config.routes[name]) {
-        //         throw new Error(`RouteJS error: route '${name}' is not in the route list.`);
-        //     }
-        //
-        //     this._route = new Route(name, this._config.routes[name], this._config);
-        //     this._params = this._parse(params);
-        // }
+        if (name) {
+            if (!this._config.routes[name]) {
+                throw new Error(`RouteJS error: route '${name}' is not in the route list.`);
+            }
+
+            this._route = new Route(name, this._config.routes[name], this._config);
+            this._params = this._parse(params);
+        }
     }
 
     /**
