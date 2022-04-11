@@ -16,6 +16,7 @@
         }
     ],
     "require": {
+        "php": "^7.3|^8.0",
         "ext-json": "*",
         "lara-igniter/framework": "^1.0"
     },
