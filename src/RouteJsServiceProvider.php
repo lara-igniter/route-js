@@ -11,7 +11,7 @@ class RouteJsServiceProvider implements PreSystem, PostControllerConstructor
     public function preSystem()
     {
         if (!file_exists(APPPATH . '/config/route-js.php')) {
-            copy(realpath(dirname(__DIR__) . '/../config/route-js.php'), APPPATH . '/config/route-js.php');
+            copy(__DIR__ . './../config/route-js.php', APPPATH . '/config/route-js.php');
         }
     }
 
