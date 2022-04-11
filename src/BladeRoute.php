@@ -44,7 +44,8 @@ class BladeRoute
 
     private function getRouteFunction()
     {
-       return config('ziggy.skip-route-function') ? '' : file_get_contents(__DIR__ . '/../dist/index.js');
-        return file_get_contents(__DIR__ . '/js/index.js');
+        app()->config->load('route-js', TRUE);
+
+        return app()->config->item('skip-route-function', 'route-js') ? '' : file_get_contents(__DIR__ . '/../dist/index.js');
     }
 }
